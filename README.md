@@ -181,3 +181,7 @@ class ApiApplicationTests {
 	}
 
 }
+
+
+
+Para rodar o projeto rode no terminal o mvn spring-boot:run
