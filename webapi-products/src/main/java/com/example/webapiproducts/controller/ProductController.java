@@ -1,7 +1,7 @@
 package com.example.webapiproducts.controller;
 
 import com.example.webapiproducts.model.Product;
-import com.example.webapiproducts.service.productService;
+import com.example.webapiproducts.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,8 +42,8 @@ public class ProductController {
 
         if (existingProduct.isPresent()) {
             Product product = existingProduct.get();
-            product.setNome(updatedProduct.getNome());
-            product.setPreco(updatedProduct.getPreco());
+            product.setName(updatedProduct.getName());
+            product.setPrice(updatedProduct.getPrice());
 
             Product savedProduct = productService.save(product);
             return ResponseEntity.ok(savedProduct);
